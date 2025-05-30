@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffcdd2 url('https://www.transparenttextures.com/patterns/glitter.png');
+  background-size: contain;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 350px;
+  height: 500px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.front {
+  background: #fff url('https://www.transparenttextures.com/patterns/roses.png');
+  background-size: cover;
+}
+
+.back {
+  background: #fff8f8;
+  transform: rotateY(180deg);
+}
+
+.text {
+  font-size: 1.2em;
+  color: #880e4f;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.back-text {
+  text-align: left;
+  overflow-y: auto;
+  max-height: 100%;
+}
